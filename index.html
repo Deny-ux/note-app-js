@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Notes App</title>
+  </head>
+  <body>
+    <button class="show-switch btn">Show archived notes</button>
+    <!-- <a href="">Show active notes</a> -->
+    <section class="tasks section">
+      <header class="section-header tasks-row">
+        <p class="header-first-column">Name</p>
+        <p>Created</p>
+        <p>Category</p>
+        <p>Content</p>
+        <p>Dates</p>
+        <div class="task-btns-container">
+          <i class="fa-solid fa-square-caret-down"></i>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+      </header>
+      <article class="single-task tasks-row">
+        <div class="task-name">
+          <i class="fa-solid note-icon fa-cart-shopping"></i>
+          <p>Shopping List</p>
+        </div>
+        <p>April 20, 2021</p>
+        <p>Task</p>
+        <p>Tomatoes, bread</p>
+        <p></p>
+        <div class="single-task-btns">
+          <i class="fa-solid fa-pen"></i>
+          <i class="fa-solid fa-square-caret-down"></i>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+      </article>
+      <!--  -->
+      <article class="single-task tasks-row">
+        <div class="task-name">
+          <i class="fa-solid note-icon fa-head-side-virus"></i>
+          <p>The theory of evolution</p>
+        </div>
+        <p>April 27, 2021</p>
+        <p>Random thought</p>
+        <p>The evolution ...</p>
+        <p></p>
+        <div class="single-task-btns">
+          <i class="fa-solid fa-pen"></i>
+          <i class="fa-solid fa-square-caret-down"></i>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+      </article>
+      <!--  -->
+      <article class="single-task tasks-row">
+        <div class="task-name">
+          <i class="fa-solid note-icon fa-lightbulb"></i>
+          <p>New feature</p>
+        </div>
+        <p>May 05, 2021</p>
+        <p>Idea</p>
+        <p>Implement new...</p>
+        <p>3/5/2021, 5/5/2021</p>
+        <div class="single-task-btns">
+          <i class="fa-solid fa-pen"></i>
+          <i class="fa-solid fa-square-caret-down"></i>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+      </article>
+      <button class="btn">Create Note</button>
+    </section>
+    <section class="summary section">
+      <header class="single-summary-row section-header">
+        <p class="header-first-column">Note Category</p>
+        <p>Active</p>
+        <p>Archived</p>
+      </header>
+      <article class="single-summary-row">
+        <div class="task-name">
+          <i class="fa-solid note-icon fa-cart-shopping"></i>
+          <p>Task</p>
+        </div>
+        <p>13</p>
+        <p>4</p>
+      </article>
+      <!--  -->
+      <article class="single-summary-row">
+        <div class="task-name">
+          <i class="fa-solid note-icon fa-lightbulb"></i>
+          <p>Task</p>
+        </div>
+        <p>13</p>
+        <p>4</p>
+      </article>
+    </section>
+  </body>
+  <script type="module" src="./index.js"></script>
+</html>
