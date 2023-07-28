@@ -20,6 +20,8 @@
   --clr-green-light: hsl(125, 71%, 66%);
   --max-width: 1300px;
   --section-width: 90vw;
+  --modal-width: 90vw;
+  --modal-max-width: 800px;
   --single-sides-padding: 5px 5px;
   --icon-size: 40px;
 }
@@ -139,4 +141,57 @@ body {
   margin-bottom: 1rem;
   padding: var(--single-sides-padding);
   align-items: center;
+}
+
+.modal-block {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: grid;
+  place-items: center;
+  /* background-color: red; */
+  position: absolute;
+  /* hide modal */
+  opacity: 0;
+  z-index: -100;
+}
+.show-modal {
+  opacity: 1;
+  z-index: 100;
+  background-color: rgba(0, 0, 100, 0.3);
+}
+.modal {
+  border-radius: 20px;
+  background-color: var(--clr-grey-3);
+  width: var(--modal-width);
+  max-width: var(--modal-max-width);
+  text-align: center;
+  padding-block: 2rem 3rem;
+  position: relative;
+}
+
+.modal h4 {
+  margin-bottom: 2rem;
+}
+.form-control {
+  display: flex;
+  justify-content: center;
+
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal .btn {
+  margin-top: 1.5rem;
+  width: 200px;
+  max-width: 100%;
+}
+
+.close-btn {
+  color: red;
+  font-size: 1.7rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
 }

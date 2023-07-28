@@ -72,7 +72,7 @@
           <i class="fa-solid fa-trash"></i>
         </div>
       </article>
-      <button class="btn">Create Note</button>
+      <button class="btn" id="createBtn">Create Note</button>
     </section>
     <section class="summary section">
       <header class="single-summary-row section-header">
@@ -97,6 +97,47 @@
         <p>13</p>
         <p>4</p>
       </article>
+    </section>
+    <section class="modal-block">
+      <!-- <div class="modal">
+        <i class="fa-solid fa-xmark close-btn"></i>
+        <form>
+          <h4>Create Your Awesome Note</h4>
+          <div class="form-control">
+            <label for="note-content">Type your text here</label>
+            <input type="text" id="note-content" name="category"  placeholder="Eggs, Milk etc."/>
+          </div>
+          <div class="form-control">
+            <label for="category">Choose category</label>
+            <select name="category" id="category">
+              <option value="task">Task</option>
+              <option value="randomThought">Random Thought</option>
+              <option value="idea">Idea</option>
+            </select>
+          </div>
+          <button type="submit" class="btn">Create</button>
+        </form>
+      </div> -->
+      <!-- change modal -->
+      <div class="modal change-modal">
+        <i class="fa-solid fa-xmark close-btn"></i>
+        <form>
+          <h4>Change Your Note</h4>
+          <div class="form-control">
+            <label for="note-content">Type new text here</label>
+            <input type="text" id="note-content" name="category" />
+          </div>
+          <div class="form-control">
+            <label for="category">Choose category</label>
+            <select name="category" id="category">
+              <option value="task">Task</option>
+              <option value="randomThought">Random Thought</option>
+              <option value="idea">Idea</option>
+            </select>
+          </div>
+          <button type="submit" class="btn">Confirm changes</button>
+        </form>
+      </div>
     </section>
   </body>
   <script type="module" src="./index.js"></script>
