@@ -40,3 +40,10 @@ export function getIconByCategory(icons, category) {
   }
   throw new Error(`Cannot find icon with provided category: ${category}`);
 }
+
+export function sliceString(string) {
+  if (string.length > 10) {
+    return `${string.slice(0, 15)}...`;
+  }
+  return string;
+}

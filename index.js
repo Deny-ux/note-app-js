@@ -3,6 +3,7 @@ const tasksContainer = document.querySelector(".tasks-container");
 const summaryContainer = document.querySelector(".summary-container");
 import { getCountByCategory } from "./utils/util.js";
 import { renderNotes, renderSummary } from "./render.js";
+import { extractDates } from "./utils/Dates.js";
 let data = [];
 let archived = false;
 
@@ -12,7 +13,7 @@ fetch("./data.json")
     let { data: dataArray, icons } = jsonData;
     data = renderNotes(dataArray, tasksContainer, icons, archived);
     const summaryData = getCountByCategory(dataArray);
-    console.log(summaryData);
+
     renderSummary(summaryData, summaryContainer, icons);
   })
   .catch((error) => console.error("Error loading JSON data:", error));
