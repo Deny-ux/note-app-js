@@ -12,7 +12,6 @@
   </head>
   <body>
     <button class="show-switch btn">Show archived notes</button>
-    <!-- <a href="">Show active notes</a> -->
     <section class="tasks section">
       <header class="section-header tasks-row">
         <p class="header-first-column">Name</p>
@@ -25,53 +24,53 @@
           <i class="fa-solid fa-trash"></i>
         </div>
       </header>
-      <article class="single-task tasks-row">
-        <div class="task-name">
-          <i class="fa-solid note-icon fa-cart-shopping"></i>
-          <p>Shopping List</p>
-        </div>
-        <p>April 20, 2021</p>
-        <p>Task</p>
-        <p>Tomatoes, bread</p>
-        <p></p>
-        <div class="single-task-btns">
-          <i class="fa-solid fa-pen"></i>
-          <i class="fa-solid fa-square-caret-down"></i>
-          <i class="fa-solid fa-trash"></i>
-        </div>
-      </article>
-      <!--  -->
-      <article class="single-task tasks-row">
-        <div class="task-name">
-          <i class="fa-solid note-icon fa-head-side-virus"></i>
-          <p>The theory of evolution</p>
-        </div>
-        <p>April 27, 2021</p>
-        <p>Random thought</p>
-        <p>The evolution ...</p>
-        <p></p>
-        <div class="single-task-btns">
-          <i class="fa-solid fa-pen"></i>
-          <i class="fa-solid fa-square-caret-down"></i>
-          <i class="fa-solid fa-trash"></i>
-        </div>
-      </article>
-      <!--  -->
-      <article class="single-task tasks-row">
-        <div class="task-name">
-          <i class="fa-solid note-icon fa-lightbulb"></i>
-          <p>New feature</p>
-        </div>
-        <p>May 05, 2021</p>
-        <p>Idea</p>
-        <p>Implement new...</p>
-        <p>3/5/2021, 5/5/2021</p>
-        <div class="single-task-btns">
-          <i class="fa-solid fa-pen"></i>
-          <i class="fa-solid fa-square-caret-down"></i>
-          <i class="fa-solid fa-trash"></i>
-        </div>
-      </article>
+      <section class="tasks-container">
+        <!-- <article class="single-task tasks-row">
+          <div class="task-name">
+            <i class="fa-solid note-icon fa-cart-shopping"></i>
+            <p>Shopping List</p>
+          </div>
+          <p>April 20, 2021</p>
+          <p>Task</p>
+          <p>Tomatoes, bread</p>
+          <p></p>
+          <div class="single-task-btns">
+            <i class="fa-solid fa-pen"></i>
+            <i class="fa-solid fa-square-caret-down"></i>
+            <i class="fa-solid fa-trash"></i>
+          </div>
+        </article>
+        <article class="single-task tasks-row">
+          <div class="task-name">
+            <i class="fa-solid note-icon fa-head-side-virus"></i>
+            <p>The theory of evolution</p>
+          </div>
+          <p>April 27, 2021</p>
+          <p>Random thought</p>
+          <p>The evolution ...</p>
+          <p></p>
+          <div class="single-task-btns">
+            <i class="fa-solid fa-pen"></i>
+            <i class="fa-solid fa-square-caret-down"></i>
+            <i class="fa-solid fa-trash"></i>
+          </div>
+        </article>
+        <article class="single-task tasks-row">
+          <div class="task-name">
+            <i class="fa-solid note-icon fa-lightbulb"></i>
+            <p>New feature</p>
+          </div>
+          <p>May 05, 2021</p>
+          <p>Idea</p>
+          <p>Implement new...</p>
+          <p>3/5/2021, 5/5/2021</p>
+          <div class="single-task-btns">
+            <i class="fa-solid fa-pen"></i>
+            <i class="fa-solid fa-square-caret-down"></i>
+            <i class="fa-solid fa-trash"></i>
+          </div>
+        </article> -->
+      </section>
       <button class="btn" id="createBtn">Create Note</button>
     </section>
     <section class="summary section">
@@ -80,23 +79,25 @@
         <p>Active</p>
         <p>Archived</p>
       </header>
-      <article class="single-summary-row">
-        <div class="task-name">
-          <i class="fa-solid note-icon fa-cart-shopping"></i>
-          <p>Task</p>
-        </div>
-        <p>13</p>
-        <p>4</p>
-      </article>
-      <!--  -->
-      <article class="single-summary-row">
-        <div class="task-name">
-          <i class="fa-solid note-icon fa-lightbulb"></i>
-          <p>Task</p>
-        </div>
-        <p>13</p>
-        <p>4</p>
-      </article>
+      <section class="summary-container">
+        <article class="single-summary-row">
+          <div class="task-name">
+            <i class="fa-solid note-icon fa-cart-shopping"></i>
+            <p>Task</p>
+          </div>
+          <p>13</p>
+          <p>4</p>
+        </article>
+        <!--  -->
+        <article class="single-summary-row">
+          <div class="task-name">
+            <i class="fa-solid note-icon fa-lightbulb"></i>
+            <p>Task</p>
+          </div>
+          <p>13</p>
+          <p>4</p>
+        </article>
+      </section>
     </section>
     <section class="modal-block">
       <!-- <div class="modal">
