@@ -171,6 +171,7 @@ body {
   padding-block: 2rem 3rem;
   position: relative;
   display: none;
+  height: 70vh;
 }
 .show-modal {
   display: block;
@@ -208,4 +209,13 @@ body {
 }
 .single-task-btns i:hover {
   color: #222;
+}
+.modal-form {
+  max-width: 80%;
+  margin-inline: auto;
+}
+.col-form-label {
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: right;
 }
