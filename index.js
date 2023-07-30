@@ -31,7 +31,7 @@ try {
   modalEditForm = getElementBySelector(".edit-modal-form");
   closeModalBtns = modalBlock.querySelectorAll(".close-btn");
 } catch (error) {
-  alert(`Oooops, there was an error! ${error}`);
+  alert(`Oooops, there was an error during finding DOM elements! ${error}`);
 }
 
 // Global data
