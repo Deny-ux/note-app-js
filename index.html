@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Notes App</title>
+  </head>
+  <body>
+    <button class="show-switch btn">Show archived notes</button>
+    <section class="tasks section">
+      <header class="section-header tasks-row">
+        <p class="header-first-column">Name</p>
+        <p>Created</p>
+        <p>Category</p>
+        <p>Content</p>
+        <p>Dates</p>
+        <div class="task-btns-container">
+          <i class="fa-solid fa-square-caret-down"></i>
+          <i class="fa-solid fa-trash"></i>
+        </div>
+      </header>
+      <section class="tasks-container"></section>
+      <button class="btn" id="createBtn">Create Note</button>
+    </section>
+    <section class="summary section">
+      <header class="single-summary-row section-header">
+        <p class="header-first-column">Note Category</p>
+        <p>Active</p>
+        <p>Archived</p>
+      </header>
+      <section class="summary-container"></section>
+    </section>
+    <section class="modal-block">
+      <!-- create modal -->
+      <div class="modal create-modal">
+        <i class="fa-solid close-btn fa-xmark"></i>
+        <form class="">
+          <h4>Create Your Awesome Note</h4>
+          <div class="form-control">
+            <label for="note-name">Type name here</label>
+            <input
+              type="text"
+              placeholder="Do grocery"
+              id="note-name"
+              name="name"
+            />
+          </div>
+          <div class="form-control">
+            <label for="note-content">Type your content here</label>
+
+            <textarea
+              id="note-content"
+              cols="30"
+              rows="10"
+              name="content"
+              placeholder="Eggs, Milk etc."
+            ></textarea>
+          </div>
+          <div class="form-control">
+            <label for="category">Choose category</label>
+            <select name="category" id="category">
+              <option value="Task">Task</option>
+              <option value="Random Thought">Random Thought</option>
+              <option value="Idea">Idea</option>
+            </select>
+          </div>
+          <button type="submit" class="btn">Create</button>
+        </form>
+      </div>
+      <!-- edit modal -->
+      <div class="modal edit-modal">
+        <i class="fa-solid fa-xmark close-btn"></i>
+        <form class="edit-modal-form">
+          <h4>Edit Your Note</h4>
+          <div class="form-control">
+            <label for="note-content">Type new name here</label>
+            <input type="text" id="note-content" name="name" />
+          </div>
+          <div class="form-control">
+            <label for="note-content">Type new content here</label>
+
+            <textarea
+              id="note-content"
+              cols="30"
+              rows="10"
+              name="content"
+              placeholder="Eggs, Milk etc."
+            ></textarea>
+          </div>
+          <div class="form-control">
+            <label for="category">Choose new category</label>
+            <select name="category" id="category">
+              <option value="Task">Task</option>
+              <option value="Random Thought">Random Thought</option>
+              <option value="Idea">Idea</option>
+            </select>
+          </div>
+          <fieldset class="archive-fieldset">
+            <input type="radio" id="archived" name="status" value="archived" />
+            <label for="archived"> Archived </label>
+            <input type="radio" id="active" name="status" value="active" />
+            <label for="active">Active</label>
+          </fieldset>
+          <button type="submit" class="btn">Confirm changes</button>
+        </form>
+      </div>
+    </section>
+  </body>
+  <script type="module" src="./index.js"></script>
+</html>
