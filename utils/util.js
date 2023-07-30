@@ -47,3 +47,11 @@ export function sliceString(string) {
   }
   return string;
 }
+
+export function getElementBySelector(selector) {
+  const element = document.querySelector(selector);
+  if (!element) {
+    throw new Error(`Can't find element by selector ${selector}`);
+  }
+  return element;
+}

@@ -24,53 +24,7 @@
           <i class="fa-solid fa-trash"></i>
         </div>
       </header>
-      <section class="tasks-container">
-        <!-- <article class="single-task tasks-row">
-          <div class="task-name">
-            <i class="fa-solid note-icon fa-cart-shopping"></i>
-            <p>Shopping List</p>
-          </div>
-          <p>April 20, 2021</p>
-          <p>Task</p>
-          <p>Tomatoes, bread</p>
-          <p></p>
-          <div class="single-task-btns">
-            <i class="fa-solid fa-pen"></i>
-            <i class="fa-solid fa-square-caret-down"></i>
-            <i class="fa-solid fa-trash"></i>
-          </div>
-        </article>
-        <article class="single-task tasks-row">
-          <div class="task-name">
-            <i class="fa-solid note-icon fa-head-side-virus"></i>
-            <p>The theory of evolution</p>
-          </div>
-          <p>April 27, 2021</p>
-          <p>Random thought</p>
-          <p>The evolution ...</p>
-          <p></p>
-          <div class="single-task-btns">
-            <i class="fa-solid fa-pen"></i>
-            <i class="fa-solid fa-square-caret-down"></i>
-            <i class="fa-solid fa-trash"></i>
-          </div>
-        </article>
-        <article class="single-task tasks-row">
-          <div class="task-name">
-            <i class="fa-solid note-icon fa-lightbulb"></i>
-            <p>New feature</p>
-          </div>
-          <p>May 05, 2021</p>
-          <p>Idea</p>
-          <p>Implement new...</p>
-          <p>3/5/2021, 5/5/2021</p>
-          <div class="single-task-btns">
-            <i class="fa-solid fa-pen"></i>
-            <i class="fa-solid fa-square-caret-down"></i>
-            <i class="fa-solid fa-trash"></i>
-          </div>
-        </article> -->
-      </section>
+      <section class="tasks-container"></section>
       <button class="btn" id="createBtn">Create Note</button>
     </section>
     <section class="summary section">
@@ -79,63 +33,79 @@
         <p>Active</p>
         <p>Archived</p>
       </header>
-      <section class="summary-container">
-        <article class="single-summary-row">
-          <div class="task-name">
-            <i class="fa-solid note-icon fa-cart-shopping"></i>
-            <p>Task</p>
-          </div>
-          <p>13</p>
-          <p>4</p>
-        </article>
-        <!--  -->
-        <article class="single-summary-row">
-          <div class="task-name">
-            <i class="fa-solid note-icon fa-lightbulb"></i>
-            <p>Task</p>
-          </div>
-          <p>13</p>
-          <p>4</p>
-        </article>
-      </section>
+      <section class="summary-container"></section>
     </section>
     <section class="modal-block">
-      <!-- <div class="modal">
-        <i class="fa-solid fa-xmark close-btn"></i>
-        <form>
+      <!-- create modal -->
+      <div class="modal create-modal">
+        <i class="fa-solid close-btn fa-xmark"></i>
+        <form class="">
           <h4>Create Your Awesome Note</h4>
           <div class="form-control">
-            <label for="note-content">Type your text here</label>
-            <input type="text" id="note-content" name="category"  placeholder="Eggs, Milk etc."/>
+            <label for="note-name">Type name here</label>
+            <input
+              type="text"
+              placeholder="Do grocery"
+              id="note-name"
+              name="name"
+            />
+          </div>
+          <div class="form-control">
+            <label for="note-content">Type your content here</label>
+
+            <textarea
+              id="note-content"
+              cols="30"
+              rows="10"
+              name="content"
+              placeholder="Eggs, Milk etc."
+            ></textarea>
           </div>
           <div class="form-control">
             <label for="category">Choose category</label>
             <select name="category" id="category">
-              <option value="task">Task</option>
-              <option value="randomThought">Random Thought</option>
-              <option value="idea">Idea</option>
+              <option value="Task">Task</option>
+              <option value="Random Thought">Random Thought</option>
+              <option value="Idea">Idea</option>
             </select>
           </div>
           <button type="submit" class="btn">Create</button>
         </form>
-      </div> -->
-      <!-- change modal -->
-      <div class="modal change-modal">
+      </div>
+      <!-- edit modal -->
+      <div class="modal edit-modal">
         <i class="fa-solid fa-xmark close-btn"></i>
-        <form>
-          <h4>Change Your Note</h4>
+        <form class="edit-modal-form">
+          <h4>Edit Your Note</h4>
           <div class="form-control">
-            <label for="note-content">Type new text here</label>
-            <input type="text" id="note-content" name="category" />
+            <label for="note-content">Type new name here</label>
+            <input type="text" id="note-content" name="name" />
           </div>
           <div class="form-control">
-            <label for="category">Choose category</label>
+            <label for="note-content">Type new content here</label>
+
+            <textarea
+              id="note-content"
+              cols="30"
+              rows="10"
+              name="content"
+              placeholder="Eggs, Milk etc."
+            ></textarea>
+          </div>
+          <div class="form-control">
+            <label for="category">Choose new category</label>
             <select name="category" id="category">
-              <option value="task">Task</option>
-              <option value="randomThought">Random Thought</option>
-              <option value="idea">Idea</option>
+              <option value="Task">Task</option>
+              <option value="Random Thought">Random Thought</option>
+              <option value="Idea">Idea</option>
             </select>
           </div>
+          <fieldset class="archive-fieldset">
+            <input type="radio" id="archived" name="status" value="archived" />
+            <label for="archived"> Archived </label>
+            <input type="radio" id="active" name="status" value="active" />
+            <label for="active">Active</label>
+          </fieldset>
           <button type="submit" class="btn">Confirm changes</button>
         </form>
       </div>
