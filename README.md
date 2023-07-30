@@ -8,6 +8,12 @@ I tried all of the listed commands menioned in document with instruction for *ho
 * Made some code changes and then saw git status
 * Performed reset --hard
 
+### How to start application
+
+1. Clone repository
+
+2. Start server, for example use Live Server
+
 ### Further idea for application
 1. Change styles.css to not repeat some blocks of code. For example some styles for   tasksContainer and summaryContainer are similar, so can be grouped
 
