@@ -1,14 +1,12 @@
 // imports
 import { getCountByCategory, getElementBySelector } from "./utils/util.js";
-import { renderNotes, renderPage, showModal, hideModals } from "./render.js";
-import { extractDates } from "./utils/Dates.js";
+import { renderPage, showModal, hideModals } from "./render.js";
 import {
   createAndAddNote,
   clearFormFields,
   openEditModal,
 } from "./manageContent.js";
 import data from "./data.js";
-import { singleTask } from "./components/singleTask.js";
 
 // DOM Elements
 let createNoteBtn;
@@ -81,14 +79,8 @@ function loadPage() {
     });
   });
 }
-function switchArchiveItem(id) {
-  notes = notes.map((note) => {
-    if (note.id === id) {
-      return { ...note, isArchived: !note.isArchived };
-    }
-    return note;
-  });
-}
+
+// Event Listeners
 
 modalEditForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -116,50 +108,11 @@ modalEditForm.addEventListener("submit", (e) => {
   loadPage();
 });
 
-// function addListenersToTasks(notes) {
-//   notes = notes.map((note) => {
-//     const singleTaskDOM = document.querySelector(`[data-id='${note.id}']`);
-
-//     // if note is not shown in page
-//     if (!singleTaskDOM) {
-//       return;
-//     }
-//     if (singleTaskDOM.hasAttribute("data-listener-on")) {
-//       console.log(`added listener already to ${note.id}`);
-//     } else {
-//       const editBtn = singleTaskDOM.querySelector(".edit-single-task-btn");
-//       const archiveBtn = singleTaskDOM.querySelector(
-//         ".archive-single-task-btn"
-//       );
-//       const deleteBtn = singleTaskDOM.querySelector(".edit-single-task-btn");
-
-//       editBtn.addEventListener("click", () => {
-//         console.log("clicked to edit" + note.id);
-//       });
-//       archiveBtn.addEventListener("click", () => {
-//         console.log(note.isArchived);
-//         note.isArchived = !note.isArchived;
-//         console.log("clicked to archive" + note.id);
-//         r();
-//       });
-//       deleteBtn.addEventListener("click", () => {
-//         console.log("clicked to delete" + note.id);
-//       });
-//       singleTaskDOM.setAttribute("data-listener-on", "true");
-//     }
-//     // console.log(singleTaskDOM);
-//     return note;
-//   });
-// }
-
-// Event Listeners
-
 showSwitchBtn.addEventListener("click", () => {
   archived = !archived;
   archived
     ? (showSwitchBtn.textContent = "Show active notes")
     : (showSwitchBtn.textContent = "Show archived notes");
-  // renderNotes(notes, tasksContainer, icons, archived);
   loadPage();
 });
 
@@ -184,11 +137,6 @@ function formCreateSubmitHandle(e) {
 
   console.log(notes);
   const formData = new FormData(e.currentTarget);
-  // const nameInput = e.currentTarget.querySelector('[name="name"]');
-  // const contentInput = e.currentTarget.querySelector('[name="content"]');
-  // const categorySelect = e.currentTarget.querySelector('[name="category"]');
-  // nameInput.value = contentInput.value = "";
-  // categorySelect.value = "Task";
   clearFormFields(e.currentTarget);
   console.log(formData);
   const name = formData.get("name");
@@ -201,20 +149,3 @@ function formCreateSubmitHandle(e) {
   console.log(notes);
   loadPage();
 }
-
-// modalBlock.addEventListener("click", (e) => {
-//   const closeModalBtn = modalBlock.querySelector(".close-btn");
-
-//   // clicking on close button
-//   if (e.target === closeModalBtn) {
-//     modalBlock.classList.remove("show-modal-block");
-//     formEventListenerAttached = false;
-//     modalForm.removeEventListener("submit", formSubmitHandle, true);
-//     return;
-//   }
-//   // adding only one eventlistener to form
-//   if (!formEventListenerAttached) {
-//     modalForm.addEventListener("submit", formSubmitHandle, true);
-//     formEventListenerAttached = true;
-//   }
-// });

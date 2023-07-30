@@ -1,3 +1,4 @@
+// There are hardcoded data
 export default {
   data: [
     {

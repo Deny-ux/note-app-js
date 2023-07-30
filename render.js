@@ -10,20 +10,6 @@ export function renderNotes(notes, tasksContainer, icons, archived = false) {
     })
     .join("");
   tasksContainer.innerHTML = notesDOMArray;
-
-  // tasksContainer.children
-  // const notesDOM = tasksContainer.querySelectorAll(".single-task");
-  // notesDOM.forEach((noteDOM) => {
-  //   if (!noteDOM.hasAttribute("data-event-listener")) {
-  //     // noteDOM.addEventListener('click', (e)=>{
-
-  //     // })
-  //     console.log(1);
-  //     noteDOM.setAttribute("data-event-listener", true);
-  //   } else {
-  //     console.log(2);
-  //   }
-  // });
 }
 
 export function renderSummary(sortedByCategoryNotes, summaryContainer, icons) {
